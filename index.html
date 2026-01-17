@@ -11,22 +11,42 @@
 
   <h2>🔥 Penting</h2>
 
-  <div style="background:white; padding:12px; margin-bottom:10px">
-    <b>Besok Pakai Seragam Pramuka</b><br>
-    <small>12 Sept 2026</small>
-    <p>Seluruh siswa wajib memakai seragam Pramuka.</p>
-  </div>
-
   <h2>ℹ️ Info</h2>
-
-  <div style="background:white; padding:12px; margin-bottom:10px">
-    <b>Pengumpulan Kas Bulanan</b><br>
-    <small>11 Sept 2026</small>
-    <p>Kas bulan September dikumpulkan paling lambat Jumat.</p>
-  </div>
 
   <hr>
   <small>Kelas X • Terakhir diperbarui manual</small>
+
+  <script>
+  const data = [
+    {
+      judul: "Besok Pakai Seragam Pramuka",
+      tanggal: "12 Sept 2026",
+      isi: "Seluruh siswa wajib memakai seragam Pramuka.",
+      kategori: "penting"
+    },
+    {
+      judul: "Pengumpulan Kas Bulanan",
+      tanggal: "11 Sept 2026",
+      isi: "Kas dikumpulkan paling lambat Jumat.",
+      kategori: "info"
+    }
+  ];
+
+  data.forEach(item => {
+    const div = document.createElement("div");
+    div.style.background = "white";
+    div.style.padding = "12px";
+    div.style.marginBottom = "10px";
+
+    div.innerHTML = `
+      <b>${item.judul}</b><br>
+      <small>${item.tanggal}</small>
+      <p>${item.isi}</p>
+    `;
+
+    document.getElementById(item.kategori).appendChild(div);
+  });
+</script>
 
 </body>
 </html>
