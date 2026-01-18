@@ -18,11 +18,13 @@
   <hr>
   <small>Kelas X • Terakhir diperbarui manual</small>
 
-  <script>
+<script>
 fetch("pengumuman.json")
-  .then(response => response.json())
+  .then(res => res.json())
   .then(data => {
     data.forEach(p => {
+      if (!document.getElementById(p.kategori)) return;
+
       const box = document.createElement("div");
       box.innerHTML = `
         <b>${p.judul}</b><br>
@@ -31,8 +33,11 @@ fetch("pengumuman.json")
       `;
       document.getElementById(p.kategori).appendChild(box);
     });
+  })
+  .catch(err => {
+    document.body.innerHTML += "<p>⚠️ Gagal memuat pengumuman</p>";
   });
 </script>
-
+  
 </body>
 </html>
