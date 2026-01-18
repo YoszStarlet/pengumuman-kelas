@@ -1,8 +1,14 @@
 [
   {
     "kategori": "penting",
-    "judul": "Tes Sistem",
-    "tanggal": "Hari ini",
-    "isi": "Kalau ini muncul, berarti sistem jalan."
+    "judul": "Besok Pakai Seragam Pramuka",
+    "tanggal": "2026-09-12",
+    "isi": "Seluruh siswa wajib memakai seragam Pramuka."
+  },
+  {
+    "kategori": "info",
+    "judul": "Kas Bulanan",
+    "tanggal": "2026-09-15",
+    "isi": "Kas bulan September dikumpulkan ke bendahara."
   }
 ]
